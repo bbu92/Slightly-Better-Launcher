@@ -22,7 +22,9 @@ weather is off until you turn it on.
   TV's IP address and the rounded position it is asked about. Nothing else is sent: no account, key or device ID.
 - **Automatic appearance** needs the same position, so choosing it can also make the geojs.io request, even with the
   weather off. Dark and Light never use the network.
-- **Posters.** Some apps publish their Watch Next posters as web addresses. SBL loads those from the app's own server.
+- **Posters.** Some apps publish their Watch Next posters as web addresses. SBL loads each one from exactly the address
+  the app gave, usually the app's own server or its image CDN, so that server sees the TV's IP address too. Posters
+  an app shares from the TV itself involve no network at all. This only happens when Watch Next is on.
 
 Nothing else leaves the TV. Watch Next data is read from the system's TV provider and stays on the TV.
 
