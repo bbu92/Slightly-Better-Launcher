@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- A light veil; the home screen stays visible behind the menu. -->
+    <View
+        android:id="@+id/scrim"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:background="@color/scrim" />
+
+    <!-- The same glass dropdown as the Inputs menu, hanging under the top bar. -->
+    <LinearLayout
+        android:id="@+id/panel"
+        android:layout_width="460dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="102dp"
+        android:layout_marginEnd="56dp"
+        android:alpha="0"
+        android:background="@drawable/glass_panel"
+        android:elevation="12dp"
+        android:orientation="vertical"
+        android:padding="6dp">
+
+        <TextView
+            android:id="@+id/panelCrumb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:paddingTop="8dp"
+            android:singleLine="true"
+            android:textColor="@color/ink_80"
+            android:textSize="11sp"
+            android:fontFamily="@font/outfit"
+            android:letterSpacing="0.16"
+            android:textAllCaps="true" />
+
+        <TextView
+            android:id="@+id/paneTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="8dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/ink_ff"
+            android:textSize="20sp"
+            android:fontFamily="@font/outfit" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="6dp"
+            android:background="@color/ink_1f" />
+
+        <ScrollView
+            android:id="@+id/settingsScroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/settingsList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+
+        <!-- What the focused row does. -->
+        <TextView
+            android:id="@+id/paneFooter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="6dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="@color/ink_8c"
+            android:textSize="12sp"
+            android:fontFamily="@font/outfit" />
+    </LinearLayout>
+</FrameLayout>

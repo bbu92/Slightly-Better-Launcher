@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Dark look (the default). values-notnight/colors.xml has the light twin of every name here;
+     UiMode picks which one the launcher's screens see. "ink" is the foreground: white on dark, near-black on light. -->
+<resources>
+    <color name="ui_bg">#FF000000</color>
+    <color name="dock_band">#FF141416</color>
+    <color name="tile_bg">#FF1C1C1E</color>
+    <color name="scrim">#55000000</color>
+    <color name="panel_start">#F22A2A2E</color>
+    <color name="panel_end">#F5161618</color>
+
+    <!-- Text and glyphs; the suffix is the alpha in hex. -->
+    <color name="ink_ff">#FFFFFFFF</color>
+    <color name="ink_f2">#F2FFFFFF</color>
+    <color name="ink_e6">#E6FFFFFF</color>
+    <color name="ink_d9">#D9FFFFFF</color>
+    <color name="ink_cc">#CCFFFFFF</color>
+    <color name="ink_b3">#B3FFFFFF</color>
+    <color name="ink_a6">#A6FFFFFF</color>
+    <color name="ink_99">#99FFFFFF</color>
+    <color name="ink_8c">#8CFFFFFF</color>
+    <color name="ink_80">#80FFFFFF</color>
+    <color name="ink_73">#73FFFFFF</color>
+    <color name="ink_66">#66FFFFFF</color>
+    <color name="ink_55">#55FFFFFF</color>
+
+    <!-- Fills, strokes and dividers. -->
+    <color name="ink_44">#44FFFFFF</color>
+    <color name="ink_38">#38FFFFFF</color>
+    <color name="ink_33">#33FFFFFF</color>
+    <color name="ink_2e">#2EFFFFFF</color>
+    <color name="ink_26">#26FFFFFF</color>
+    <color name="ink_1f">#1FFFFFFF</color>
+    <color name="ink_14">#14FFFFFF</color>
+    <color name="ink_0d">#0DFFFFFF</color>
+    <color name="ink_00">#00FFFFFF</color>
+
+    <!-- The focused row or pill: a solid slab with the opposite ink on top. -->
+    <color name="focus_fill">#F5FFFFFF</color>
+    <color name="focus_ff">#FF111111</color>
+    <color name="focus_e6">#E6111111</color>
+    <color name="focus_99">#99111111</color>
+
+    <!-- The floating focus frame over a tile. -->
+    <color name="glass_rim">#F2FFFFFF</color>
+    <color name="glass_fill_top">#3DFFFFFF</color>
+    <color name="glass_fill_bottom">#12FFFFFF</color>
+    <color name="glass_specular">#66FFFFFF</color>
+
+    <!-- Alpha (0-255) of the ambient colour behind the home screen, at its centre and halfway out. -->
+    <integer name="ambient_a1">30</integer>
+    <integer name="ambient_a2">12</integer>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Current value of a settings row, on the right. -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true" android:color=    "@color/focus_ff" />
+        <item android:color="@color/ink_e6" />
+</selector>

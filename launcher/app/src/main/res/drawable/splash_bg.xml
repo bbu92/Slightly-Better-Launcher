@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Starting window: a stand-in for the home screen (clock, top bar, hero, dock band and inputs as plain shapes),
+     laid out for a 960x540dp 1080p TV, so launching never flashes white. Dark whatever the look chosen later. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <gradient android:type="radial" android:centerX="0.32" android:centerY="0.42"
+                android:gradientRadius="70%p" android:startColor="#FF2E0A12" android:endColor="#FF0A0608" />
+        </shape>
+    </item>
+
+    <!-- greeting, clock, weather and date -->
+    <item android:top="30dp" android:start="58dp" android:width="108dp" android:height="6dp" android:gravity="top|start">
+        <shape android:shape="rectangle"><solid android:color="#55FFFFFF" /><corners android:radius="3dp" /></shape>
+    </item>
+    <item android:top="56dp" android:start="56dp" android:width="124dp" android:height="38dp" android:gravity="top|start">
+            <shape android:shape="rectangle"><solid android:color="#33FFFFFF" /><corners android:radius="10dp" /></shape>
+    </item>
+    <item android:top="60dp" android:start="198dp" android:width="1dp" android:height="30dp" android:gravity="top|start">
+        <shape android:shape="rectangle"><solid android:color="#33FFFFFF" /></shape>
+    </item>
+    <item android:top="62dp" android:start="214dp" android:width="150dp" android:height="14dp" android:gravity="top|start">
+        <shape android:shape="rectangle"><solid android:color="#66FFFFFF" /><corners android:radius="7dp" /></shape>
+    </item>
+    <item android:top="84dp" android:start="214dp" android:width="120dp" android:height="9dp" android:gravity="top|start">
+        <shape android:shape="rectangle"><solid android:color="#40FFFFFF" /><corners android:radius="4dp" /></shape>
+    </item>
+
+    <!-- top bar: the AirPlay name pill and three round buttons -->
+    <item android:top="59dp" android:end="212dp" android:width="118dp" android:height="41dp" android:gravity="top|end">
+        <shape android:shape="rectangle"><solid android:color="#26FFFFFF" /><stroke android:width="1dp" android:color="#38FFFFFF" /><corners android:radius="21dp" /></shape>
+    </item>
+    <item android:top="59dp" android:end="160dp" android:width="41dp" android:height="41dp" android:gravity="top|end">
+        <shape android:shape="oval"><solid android:color="#26FFFFFF" /><stroke android:width="1dp" android:color="#38FFFFFF" /></shape>
+    </item>
+    <item android:top="59dp" android:end="108dp" android:width="41dp" android:height="41dp" android:gravity="top|end">
+        <shape android:shape="oval"><solid android:color="#26FFFFFF" /><stroke android:width="1dp" android:color="#38FFFFFF" /></shape>
+    </item>
+    <item android:top="59dp" android:end="56dp" android:width="41dp" android:height="41dp" android:gravity="top|end">
+        <shape android:shape="oval"><solid android:color="#26FFFFFF" /><stroke android:width="1dp" android:color="#38FFFFFF" /></shape>
+    </item>
+
+    <!-- hero: the picture fading in from the left, the text lines, the button and the dots -->
+    <item android:top="124dp" android:end="54dp" android:width="436dp" android:height="186dp" android:gravity="top|end">
+        <shape android:shape="rectangle">
+            <gradient android:angle="0" android:startColor="#00D13A3A" android:endColor="#33B3283A" />
+        </shape>
+    </item>
+    <item android:top="126dp" android:start="68dp" android:width="110dp" android:height="6dp" android:gravity="top|start">
+        <shape android:shape="rectangle"><solid android:color="#59FFFFFF" /><corners android:radius="3dp" /></shape>
+    </item>
+    <item android:top="146dp" android:start="68dp" android:width="400dp" android:height="24dp" android:gravity="top|start">
+            <shape android:shape="rectangle"><solid android:color="#33FFFFFF" /><corners android:radius="12dp" /></shape>
+    </item>
+    <item android:top="182dp" android:start="68dp" android:width="220dp" android:height="24dp" android:gravity="top|start">
+            <shape android:shape="rectangle"><solid android:color="#33FFFFFF" /><corners android:radius="12dp" /></shape>
+    </item>
+    <item android:top="224dp" android:start="68dp" android:width="150dp" android:height="8dp" android:gravity="top|start">
+        <shape android:shape="rectangle"><solid android:color="#59FFFFFF" /><corners android:radius="4dp" /></shape>
+    </item>
+    <item android:top="286dp" android:start="78dp" android:width="52dp" android:height="33dp" android:gravity="top|start">
+        <shape android:shape="rectangle"><solid android:color="#26FFFFFF" /><stroke android:width="1dp" android:color="#38FFFFFF" /><corners android:radius="17dp" /></shape>
+    </item>
+    <item android:top="299dp" android:start="146dp" android:width="6dp" android:height="6dp" android:gravity="top|start">
+        <shape android:shape="oval"><solid android:color="#FFFFFFFF" /></shape>
+    </item>
+    <item android:top="299dp" android:start="160dp" android:width="6dp" android:height="6dp" android:gravity="top|start">
+        <shape android:shape="oval"><solid android:color="#59FFFFFF" /></shape>
+    </item>
+    <item android:top="299dp" android:start="174dp" android:width="6dp" android:height="6dp" android:gravity="top|start">
+        <shape android:shape="oval"><solid android:color="#59FFFFFF" /></shape>
+    </item>
+
+    <!-- dock band with six tiles -->
+    <item android:top="338dp" android:start="54dp" android:end="54dp" android:height="93dp" android:gravity="top|fill_horizontal">
+        <shape android:shape="rectangle"><solid android:color="#FF141416" /><stroke android:width="1dp" android:color="#1FFFFFFF" /><corners android:radius="29dp" /></shape>
+    </item>
+    <item android:top="351dp" android:start="68dp" android:width="117dp" android:height="66dp" android:gravity="top|start">
+        <shape android:shape="rectangle"><solid android:color="#FF2A2A30" /><corners android:radius="16dp" /></shape>
+    </item>
+    <item android:top="351dp" android:start="209dp" android:width="117dp" android:height="66dp" android:gravity="top|start">
+        <shape android:shape="rectangle"><solid android:color="#FF2A2A30" /><corners android:radius="16dp" /></shape>
+    </item>
+    <item android:top="351dp" android:start="350dp" android:width="117dp" android:height="66dp" android:gravity="top|start">
+        <shape android:shape="rectangle"><solid android:color="#FF2A2A30" /><corners android:radius="16dp" /></shape>
+    </item>
+    <item android:top="351dp" android:start="491dp" android:width="117dp" android:height="66dp" android:gravity="top|start">
+        <shape android:shape="rectangle"><solid android:color="#FF2A2A30" /><corners android:radius="16dp" /></shape>
+    </item>
+    <item android:top="351dp" android:start="632dp" android:width="117dp" android:height="66dp" android:gravity="top|start">
+        <shape android:shape="rectangle"><solid android:color="#FF2A2A30" /><corners android:radius="16dp" /></shape>
+    </item>
+    <item android:top="351dp" android:start="773dp" android:width="117dp" android:height="66dp" android:gravity="top|start">
+        <shape android:shape="rectangle"><solid android:color="#FF2A2A30" /><corners android:radius="16dp" /></shape>
+    </item>
+
+    <!-- connected inputs -->
+    <item android:top="444dp" android:start="66dp" android:width="64dp" android:height="7dp" android:gravity="top|start">
+        <shape android:shape="rectangle"><solid android:color="#4DFFFFFF" /><corners android:radius="4dp" /></shape>
+    </item>
+    <item android:top="462dp" android:start="60dp" android:width="148dp" android:height="36dp" android:gravity="top|start">
+        <shape android:shape="rectangle"><solid android:color="#1AFFFFFF" /><stroke android:width="1dp" android:color="#2EFFFFFF" /><corners android:radius="18dp" /></shape>
+    </item>
+    <item android:top="462dp" android:start="218dp" android:width="78dp" android:height="36dp" android:gravity="top|start">
+        <shape android:shape="rectangle"><solid android:color="#1AFFFFFF" /><stroke android:width="1dp" android:color="#2EFFFFFF" /><corners android:radius="18dp" /></shape>
+    </item>
+</layer-list>

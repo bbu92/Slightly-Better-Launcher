@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- A faint haze just above the edge. -->
+    <item android:gravity="bottom" android:height="6dp">
+        <shape android:shape="rectangle">
+            <gradient android:angle="90" android:startColor="@color/ink_0d" android:endColor="@color/ink_00" />
+        </shape>
+    </item>
+    <!-- The hairline itself, fading out towards both ends. -->
+    <item android:gravity="bottom" android:height="1.5dp">
+        <shape android:shape="rectangle">
+            <gradient android:angle="0" android:startColor="@color/ink_00" android:centerColor="@color/ink_55" android:endColor="@color/ink_00" />
+        </shape>
+    </item>
+</layer-list>

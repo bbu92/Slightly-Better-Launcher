@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Light look: Apple TV white. Same names as values/colors.xml. -->
+<resources>
+    <color name="ui_bg">#FFF5F5F7</color>
+    <color name="dock_band">#FFFFFFFF</color>
+    <color name="tile_bg">#FFE5E5EA</color>
+    <color name="scrim">#33000000</color>
+    <color name="panel_start">#F7FFFFFF</color>
+    <color name="panel_end">#F5F2F2F7</color>
+
+    <color name="ink_ff">#FF1D1D1F</color>
+    <color name="ink_f2">#F21D1D1F</color>
+    <color name="ink_e6">#E61D1D1F</color>
+    <color name="ink_d9">#D91D1D1F</color>
+    <color name="ink_cc">#CC1D1D1F</color>
+    <color name="ink_b3">#B31D1D1F</color>
+    <color name="ink_a6">#A61D1D1F</color>
+    <color name="ink_99">#991D1D1F</color>
+    <color name="ink_8c">#8C1D1D1F</color>
+    <color name="ink_80">#801D1D1F</color>
+    <color name="ink_73">#731D1D1F</color>
+    <color name="ink_66">#661D1D1F</color>
+    <color name="ink_55">#331D1D1F</color>
+
+    <color name="ink_44">#331D1D1F</color>
+    <color name="ink_38">#261D1D1F</color>
+    <color name="ink_33">#221D1D1F</color>
+    <color name="ink_2e">#1A1D1D1F</color>
+    <color name="ink_26">#141D1D1F</color>
+    <color name="ink_1f">#141D1D1F</color>
+    <color name="ink_14">#0F1D1D1F</color>
+    <color name="ink_0d">#081D1D1F</color>
+    <color name="ink_00">#001D1D1F</color>
+
+    <color name="focus_fill">#F51D1D1F</color>
+    <color name="focus_ff">#FFFFFFFF</color>
+    <color name="focus_e6">#E6FFFFFF</color>
+    <color name="focus_99">#99FFFFFF</color>
+
+    <color name="glass_rim">#F21D1D1F</color>
+    <color name="glass_fill_top">#14FFFFFF</color>
+    <color name="glass_fill_bottom">#05FFFFFF</color>
+    <color name="glass_specular">#00FFFFFF</color>
+
+    <integer name="ambient_a1">24</integer>
+    <integer name="ambient_a2">10</integer>
+</resources>

@@ -17,9 +17,10 @@
         android:paddingTop="8dp"
         android:paddingBottom="6dp"
         android:text="@string/module_cards"
-        android:textColor="#8CFFFFFF"
+        android:textColor="@color/ink_8c"
         android:textSize="11sp"
-        android:fontFamily="@font/outfit_medium"
+        android:fontFamily="@font/outfit"
+        android:fontVariationSettings="'wght' 500"
         android:letterSpacing="0.18"
         android:textAllCaps="true" />
 

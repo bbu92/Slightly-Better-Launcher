@@ -18,9 +18,10 @@
         android:layout_height="wrap_content"
         android:singleLine="true"
         android:ellipsize="end"
-        android:textColor="#FFFFFFFF"
+        android:textColor="@color/ink_ff"
         android:textSize="22sp"
-        android:fontFamily="@font/outfit_medium"
+        android:fontFamily="@font/outfit"
+        android:fontVariationSettings="'wght' 500"
         android:letterSpacing="-0.01" />
 
     <TextView
@@ -28,7 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:textColor="#D9FFFFFF"
+        android:textColor="@color/ink_d9"
         android:textSize="15sp"
         android:lineSpacingExtra="3sp"
         android:fontFamily="@font/outfit" />
@@ -38,7 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
-        android:textColor="#D9FFFFFF"
+        android:textColor="@color/ink_d9"
         android:textSize="15sp"
         android:lineSpacingExtra="3sp"
         android:fontFamily="@font/outfit" />
@@ -49,7 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/card_prompt_hint"
-        android:textColor="#99FFFFFF"
+        android:textColor="@color/ink_99"
         android:textSize="13sp"
         android:fontFamily="@font/outfit" />
 
@@ -59,7 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:maxLines="2"
-        android:textColor="#80FFFFFF"
+        android:textColor="@color/ink_80"
         android:textSize="12sp"
         android:letterSpacing="0.03"
         android:fontFamily="@font/outfit" />
