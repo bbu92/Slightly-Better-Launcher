@@ -194,4 +194,8 @@
     <string name="language_sub">Język SBL, niezależnie od ustawień telewizora</string>
     <string name="language_auto">Automatycznie (język TV)</string>
     <string name="appearance_auto">Automatycznie (zachód słońca)</string>
+    <string name="weather_prompt_title">Pokazać pogodę?</string>
+    <string name="weather_prompt_body">Pogoda pochodzi z Open-Meteo. Aby ustalić, gdzie jest telewizor, SBL pyta geojs.io. Obie usługi widzą adres IP telewizora. Nic więcej nie jest wysyłane. Można to później zmienić w Ustawieniach.</string>
+    <string name="weather_prompt_on">Włącz</string>
+    <string name="weather_prompt_off">Nie teraz</string>
 </resources>

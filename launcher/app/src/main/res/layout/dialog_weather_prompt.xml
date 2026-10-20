@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The one-time weather question: a title, what is sent where, and two buttons.
+     Not now is focused first; Back means Not now too. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/glass_panel"
+    android:paddingStart="26dp"
+    android:paddingEnd="26dp"
+    android:paddingTop="22dp"
+    android:paddingBottom="20dp"
+    android:elevation="12dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:text="@string/weather_prompt_title"
+        android:textColor="@color/ink_ff"
+        android:textSize="22sp"
+        android:fontFamily="@font/outfit"
+        android:fontVariationSettings="'wght' 500"
+        android:letterSpacing="-0.01" />
+
+    <TextView
+        android:id="@+id/body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/weather_prompt_body"
+        android:textColor="@color/ink_d9"
+        android:textSize="15sp"
+        android:lineSpacingExtra="3sp"
+        android:fontFamily="@font/outfit" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+        <TextView
+            android:id="@+id/btnOff"
+            style="@style/TopButton"
+            android:text="@string/weather_prompt_off"
+            android:nextFocusUp="@+id/btnOff"
+            android:nextFocusDown="@+id/btnOff"
+            android:nextFocusLeft="@+id/btnOff"
+            android:nextFocusRight="@+id/btnOn" />
+
+        <TextView
+            android:id="@+id/btnOn"
+            style="@style/TopButton"
+            android:text="@string/weather_prompt_on"
+            android:nextFocusUp="@+id/btnOn"
+            android:nextFocusDown="@+id/btnOn"
+            android:nextFocusLeft="@+id/btnOff"
+            android:nextFocusRight="@+id/btnOn" />
+    </LinearLayout>
+</LinearLayout>

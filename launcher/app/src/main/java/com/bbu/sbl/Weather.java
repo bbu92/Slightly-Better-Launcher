@@ -17,7 +17,8 @@ import java.util.Locale;
 
 /**
  * Current weather for the place the TV is in, from Open-Meteo (free, no key). The place comes from the TV's
- * last known location when it has one, otherwise from its internet address (rough, city level). Only
+ * last known location when it has one, otherwise from its internet address through geojs.io (rough, city level;
+ * the only lookup service, picked because it states that it keeps no access logs). Only
  * coordinates and a weather request leave the TV; the answer is cached for half an hour.
  */
 final class Weather {
@@ -125,13 +126,6 @@ final class Weather {
     }
 
     private static double[] addressLocation() {
-        try {
-            JSONObject j = new JSONObject(get("https://ipwho.is/"));
-            if (j.optBoolean("success", true) && j.has("latitude")) {
-                return new double[]{j.getDouble("latitude"), j.getDouble("longitude")};
-            }
-        } catch (Exception ignored) {
-        }
         try {
             JSONObject j = new JSONObject(get("https://get.geojs.io/v1/ip/geo.json"));
             return new double[]{Double.parseDouble(j.getString("latitude")), Double.parseDouble(j.getString("longitude"))};

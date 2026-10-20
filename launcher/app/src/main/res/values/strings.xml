@@ -194,4 +194,8 @@
     <string name="move_hint">Use the arrow keys to move, OK to finish</string>
     <string name="tile_hidden">%1$s hidden. Bring it back in SBL settings.</string>
     <string name="appearance_auto">Automatic (follows sunset)</string>
+    <string name="weather_prompt_title">Show the weather?</string>
+    <string name="weather_prompt_body">The weather comes from Open-Meteo. To find where the TV is, SBL asks geojs.io. Both services see the TV\'s IP address. Nothing else is sent. You can change this later in Settings.</string>
+    <string name="weather_prompt_on">Turn on</string>
+    <string name="weather_prompt_off">Not now</string>
 </resources>

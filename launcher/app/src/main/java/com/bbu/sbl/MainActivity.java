@@ -524,11 +524,78 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
 
     // ---- weather -----------------------------------------------------------------------------------
 
+    private Dialog weatherPrompt;
+
+    /**
+     * The weather starts off. Whether to turn it on is asked once (the answer is saved, and the Settings
+     * switch changes it later). A TV that was already showing the weather before this question existed keeps it on.
+     */
+    private boolean weatherAnswered() {
+        if (Prefs.has(this, Prefs.WEATHER)) return true;
+        if (Weather.cached(this) == null) return false;
+        Prefs.putBool(this, Prefs.WEATHER, true);
+        return true;
+    }
+
+    /** Only over a laid out grid with window focus, after the Watch Next permission question, and never over another prompt. */
+    private void askWeatherOnce() {
+        if (weatherPrompt != null || cardPrompt != null || openPopup != null || !tilesReady || !hasWindowFocus()
+                || isFinishing() || isDestroyed() || Prefs.has(this, Prefs.WEATHER)) return;
+        if (showFeatured && checkSelfPermission(FeaturedLoader.READ_TV_LISTINGS) != PackageManager.PERMISSION_GRANTED
+                && !getSharedPreferences("sbl_flags", MODE_PRIVATE).getBoolean("asked_tv_listings", false)) return;
+
+        View panel = getLayoutInflater().inflate(R.layout.dialog_weather_prompt, root, false);
+        final TextView off = panel.findViewById(R.id.btnOff);
+        final TextView on = panel.findViewById(R.id.btnOn);
+        final Dialog dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(panel);
+        dialog.setCanceledOnTouchOutside(false);
+        Window w = dialog.getWindow();
+        if (w != null) {
+            w.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+            w.setLayout((int) (440 * density), ViewGroup.LayoutParams.WRAP_CONTENT);
+            w.setDimAmount(0.6f);
+        }
+        final boolean[] decided = {false};
+        View.OnClickListener choose = v -> {
+            if (decided[0]) return;
+            decided[0] = true;
+            weatherPrompt = null;
+            dialog.dismiss();
+            Prefs.putBool(this, Prefs.WEATHER, v.getId() == R.id.btnOn);
+            updateWeather();
+            showCardPrompt();
+        };
+        off.setOnClickListener(choose);
+        on.setOnClickListener(choose);
+        dialog.setOnCancelListener(d -> choose.onClick(off));
+        dialog.setOnDismissListener(d -> {
+            if (weatherPrompt == dialog) weatherPrompt = null;
+        });
+        View.OnKeyListener keys = (v, keyCode, event) -> {
+            if (event.getAction() != KeyEvent.ACTION_DOWN) return false;
+            if (keyCode == KeyEvent.KEYCODE_DPAD_UP || keyCode == KeyEvent.KEYCODE_DPAD_DOWN) return true;
+            if (keyCode == KeyEvent.KEYCODE_DPAD_LEFT) return v.getId() == R.id.btnOff;
+            return keyCode == KeyEvent.KEYCODE_DPAD_RIGHT && v.getId() == R.id.btnOn;
+        };
+        off.setOnKeyListener(keys);
+        on.setOnKeyListener(keys);
+        weatherPrompt = dialog;
+        dialog.show();
+        off.requestFocus();
+    }
+
     private boolean weatherLoading;
 
     /** Shows the cached weather at once, and fetches a fresh reading in the background when it is old. */
     private void updateWeather() {
-        if (!Prefs.getBool(this, Prefs.WEATHER, true)) {
+        if (!weatherAnswered()) {
+            weatherView.setVisibility(View.GONE);
+            handler.postDelayed(this::askWeatherOnce, 2000);
+            return;
+        }
+        if (!Prefs.getBool(this, Prefs.WEATHER, false)) {
             weatherView.setVisibility(View.GONE);
             return;
         }
@@ -640,6 +707,7 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
         moveMode = false;
         // Nothing of ours stays on screen over another app; an undecided prompt simply returns next time.
         if (cardPrompt != null) cardPrompt.dismiss();
+        if (weatherPrompt != null) weatherPrompt.dismiss();
         if (openPopup != null) openPopup.dismiss();
     }
 
@@ -662,7 +730,10 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
-        if (hasFocus) showCardPrompt();
+        if (hasFocus) {
+            askWeatherOnce();
+            showCardPrompt();
+        }
     }
 
     @Override
@@ -1900,7 +1971,7 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
      * the next one follows as soon as this one is answered. Nothing is shown until the owner says Show.
      */
     private void showCardPrompt() {
-        if (!moduleCards || !tilesReady || promptsPaused || cardPrompt != null || !hasWindowFocus() || isFinishing()) return;
+        if (!moduleCards || !tilesReady || promptsPaused || cardPrompt != null || weatherPrompt != null || !hasWindowFocus() || isFinishing()) return;
         if (cards.isEmpty() || !CardFeature.working()) return;
         CardFeature.run(() -> {
             showCardPromptNow();

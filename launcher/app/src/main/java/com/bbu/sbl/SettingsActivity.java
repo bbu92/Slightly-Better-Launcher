@@ -229,8 +229,8 @@ public class SettingsActivity extends Activity {
             row(R.string.featured_interval_setting, R.string.featured_interval_sub,
                     intervalLabel(Prefs.getInt(this, Prefs.FEATURED_INTERVAL, 6)), this::chooseInterval);
         }
-        toggle(R.string.weather_setting, R.string.weather_sub, Prefs.WEATHER, Prefs.getBool(this, Prefs.WEATHER, true));
-        if (Prefs.getBool(this, Prefs.WEATHER, true)) {
+        toggle(R.string.weather_setting, R.string.weather_sub, Prefs.WEATHER, Prefs.getBool(this, Prefs.WEATHER, false));
+        if (Prefs.getBool(this, Prefs.WEATHER, false)) {
             row(R.string.weather_unit_setting, R.string.weather_unit_sub,
                     getString("f".equals(Weather.unit(this)) ? R.string.unit_f : R.string.unit_c), this::chooseUnit);
         }

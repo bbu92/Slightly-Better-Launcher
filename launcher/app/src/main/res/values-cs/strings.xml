@@ -194,4 +194,8 @@
     <string name="language_sub">Jazyk SBL bez ohledu na nastavení televizoru</string>
     <string name="language_auto">Automaticky (jazyk TV)</string>
     <string name="appearance_auto">Automaticky (západ slunce)</string>
+    <string name="weather_prompt_title">Zobrazit počasí?</string>
+    <string name="weather_prompt_body">Počasí pochází z Open-Meteo. Aby zjistil, kde se televize nachází, ptá se SBL služby geojs.io. Obě služby vidí IP adresu televize. Nic dalšího se neodesílá. Můžete to později změnit v Nastavení.</string>
+    <string name="weather_prompt_on">Zapnout</string>
+    <string name="weather_prompt_off">Teď ne</string>
 </resources>

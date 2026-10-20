@@ -192,4 +192,8 @@
     <string name="language_sub">SBL\'nin dili, TV hangi dilde olursa olsun</string>
     <string name="language_auto">Otomatik (TV dili)</string>
     <string name="appearance_auto">Otomatik (gün batımı)</string>
+    <string name="weather_prompt_title">Hava durumu gösterilsin mi?</string>
+    <string name="weather_prompt_body">Hava durumu Open-Meteo\'dan gelir. TV\'nin nerede olduğunu bulmak için SBL geojs.io\'ya sorar. İki servis de TV\'nin IP adresini görür. Başka bir şey gönderilmez. Bunu daha sonra Ayarlar\'dan değiştirebilirsin.</string>
+    <string name="weather_prompt_on">Aç</string>
+    <string name="weather_prompt_off">Şimdi değil</string>
 </resources>

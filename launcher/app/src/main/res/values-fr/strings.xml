@@ -194,4 +194,8 @@
     <string name="language_sub">La langue de SBL, quelle que soit celle du téléviseur</string>
     <string name="language_auto">Automatique (langue du téléviseur)</string>
     <string name="appearance_auto">Automatique (coucher du soleil)</string>
+    <string name="weather_prompt_title">Afficher la météo ?</string>
+    <string name="weather_prompt_body">La météo provient d\'Open-Meteo. Pour savoir où se trouve le téléviseur, SBL interroge geojs.io. Les deux services voient l\'adresse IP du téléviseur. Rien d\'autre n\'est envoyé. Vous pouvez le modifier plus tard dans les Réglages.</string>
+    <string name="weather_prompt_on">Activer</string>
+    <string name="weather_prompt_off">Pas maintenant</string>
 </resources>
